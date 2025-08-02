@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mukesh | The Visionary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Titillium+Web:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papf6F0B3MCEu9VGV7dGJqsc0Nc/1EGB1Ejq+qHKTf6nDFbZT+7O/8NRWHP5pxlSPFg4TAxVxnlCbE5NPTvguw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Titillium Web', sans-serif;
+      background: radial-gradient(ellipse at top, #0f0f0f, #000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header.navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      backdrop-filter: blur(10px);
+      z-index: 999;
+      background: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 4px 30px rgba(255, 80, 0, 0.4);
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      color: #ff4f00;
+      text-shadow: 0 0 10px #ff4f00cc;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      position: relative;
+      transition: 0.4s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #ff4f00;
+      left: 0;
+      bottom: -5px;
+      transition: 0.4s;
+    }
+
+    .nav-links a:hover {
+      color: #ff4f00;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background: url('mukes.png') center/cover no-repeat;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-family: 'Orbitron';
+      color: #ff4f00;
+      text-shadow: 0 0 20px #ff4f00aa;
+      animation: glitch 1.5s infinite;
+    }
+
+    .typewriter {
+      color: #fff;
+      font-size: 1.5rem;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(30, end), blink .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 red, -2px 0 blue; }
+      20% { text-shadow: -2px 0 red, 2px 0 blue; }
+      40% { text-shadow: 2px 0 red, -2px 0 blue; }
+      60% { text-shadow: -2px 0 red, 2px 0 blue; }
+      80% { text-shadow: 2px 0 red, -2px 0 blue; }
+      100% { text-shadow: -2px 0 red, 2px 0 blue; }
+    }
+
+    .section {
+      padding: 100px 50px;
+      text-align: center;
+    }
+
+    .glass-section {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 40px;
+      padding: 50px;
+      border-radius: 15px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px rgba(255, 80, 0, 0.3);
+      transition: all 0.5s ease-in-out;
+    }
+
+    .glass-section:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 40px rgba(255, 80, 0, 0.6);
+    }
+
+    .skills-grid, .project-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.07);
+      padding: 20px 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 15px rgba(255, 80, 0, 0.3);
+      transition: 0.3s ease;
+      font-weight: bold;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 80, 0, 0.6);
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      background: #111;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🌌 MUKESH</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <section class="hero">
+    <h1>The Visionary Dev</h1>
+    <p class="typewriter">Crafting Code. Building Dreams. Living the Future.</p>
+  </section>
+
+  <section id="about" class="section glass-section" data-aos="fade-up">
+    <h2>👨‍💻 About Me</h2>
+    <p>Driven by passion, powered by caffeine, focused on futuristic digital experiences.</p>
+  </section>
+
+  <section id="skills" class="section glass-section" data-aos="fade-right">
+    <h2>⚙️ Skills</h2>
+    <div class="skills-grid">
+      <div class="card">Java</div>
+      <div class="card">SQL</div>
+      <div class="card">HTML/CSS</div>
+      <div class="card">JavaScript</div>
+      <div class="card">Python</div>
+      <div class="card">React</div>
+    </div>
+  </section>
+
+  <section id="projects" class="section glass-section" data-aos="fade-left">
+    <h2>📂 Projects</h2>
+    <div class="project-grid">
+      <div class="card">Campus Bridge LMS</div>
+      <div class="card">Soulmate AGI Chatbot</div>
+      <div class="card">AI Video Analyzer</div>
+    </div>
+  </section>
+
+  <section id="contact" class="section glass-section" data-aos="zoom-in">
+    <h2>📞 Contact</h2>
+    <p>Email: jangammukesh@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/jangam-mukesh/ target"="_blank" style="color:#ff4f00">@jangammukesh</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Mukesh. Crafted with ❤️ using HTML, CSS, JS.
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+    });
+  </script>
+</body>
+</html>
